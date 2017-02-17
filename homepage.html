@@ -1,0 +1,91 @@
+<html>
+<head>
+    <title>COFFEE</title>
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <link rel="shortcut icon" type="image/png" href="http://auvi.tibyte.net/favicon.png">
+    <script src="https://use.fontawesome.com/bf8e46d2ef.js"></script>
+</head>
+<body>
+    <style>
+body {
+    padding: 0;
+    margin: 0;
+}
+h1 {
+    text-align: center;
+    color: #333;
+    font-family: sans-serif;
+    margin: 0 .3em;
+    padding: 0.5em;
+    border-bottom: solid 1px #CCC;
+    position: relative;
+}
+#expl {
+    position: absolute;
+    right: 40%;
+    bottom: .5em;
+    color: #AAA;
+    font-size: .5em;
+    font-family: monospace;
+    font-weight: 100;
+}
+ul {
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+li {
+    transition: background-color .1s;
+    padding: .5em .5em;
+}
+li:hover {
+    background-color: #EEE;
+}
+code {
+    color: #FFF;
+    background-color: #666;
+    text-align: center;
+    font-size: 1em;
+    margin: auto auto;
+    padding: 1em;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+a:link, a:visited {
+    color: #222;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+@media (max-width: 900px) {
+    #expl {
+        right: 10%;
+        bottom: 1em;
+    }
+    h1 {
+        padding: 1em 0.3em;
+    }
+    li {
+        padding: 1em 1em;
+    }
+    a {
+        font-size: 2em;
+    }
+}
+    </style>
+    <h1><i class="fa fa-coffee"></i> Coffee Server <i class="fa fa-cloud"></i><span id="expl">because it serves coffee</span></h1>
+    <ul>
+        <a href="/start/"><li>Press power button</li></a>
+        <a href="/brew/"><li>Press coffee button</li></a>
+        <a href="/both/"><li>Coffee please</li></a>
+    </ul>
+    <br>
+    <br>
+    <code>&gt;&gt; {{ .Message }} &lt;&lt;</code>
+</body>
+</html>
